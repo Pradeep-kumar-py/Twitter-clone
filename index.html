@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        .input input {
+            background-image: url(svg/search.svg);
+            background-size: 20px;
+            background-position-x: 15px;
+            background-color: #31374a;
+            box-sizing: border-box;
+            /* outline: none; */
+            border: none;
+
+        }
+
+                /* For modern browsers */
+        ::-webkit-scrollbar {
+            width: 8px; /* Adjust width as needed */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e; /* Darker grey for the scrollbar track */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4b5563; /* Medium grey for the scrollbar thumb */
+            border-radius: 10px;
+            border: 2px solid #1e1e1e; /* Optional: creates spacing between thumb and track */
+        }
+
+        /* Firefox-specific scrollbar styling */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #4b5563 #1e1e1e; /* thumb color first, track color second */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for WebKit browsers */
+        }
+        .scrollbar-hide {
+        -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
+        scrollbar-width: none;     /* Hide scrollbar for Firefox */
+        }
+
+    </style>
+</head>
+
+<body class="p-0 m-0 bg-black text-white">
+    <div class="container flex w-[90%]  justify-center ml-[6%] relative">
+        <div class="left w-[22%] ml-[2vw] h-[100%] sticky top-0">
+            <ul class="text-[22px] ">
+                <li class="flex items-center h-[50px] overflow-hidden"><img src="svg/x.svg" alt=""
+                        class="invert object-contain h-[30px] ">
+                </li>
+                <li class="flex items-center h-[50px] w-auto  overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/home.svg" alt="" class="invert  object-contain h-[30px]">Home
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/explore.svg" alt="" class="invert object-contain h-[30px] ">Explore
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/notification.svg" alt="" class="invert object-contain h-[30px] ">Notifications
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/message.svg" alt="" class="invert object-contain h-[30px] ">Messages
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/grok.svg" alt="" class="invert object-contain h-[30px] ">Grok
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/bookmark.svg" alt="" class="invert object-contain h-[30px] ">Bookmarks
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/jobs.svg" alt="" class="invert object-contain h-[30px] ">Jobs
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/communities.svg" alt="" class="invert object-contain h-[30px] ">Communities
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/x.svg" alt="" class="invert object-contain h-[30px] ">Premium
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/verified-orgs.svg" alt="" class="invert object-contain h-[30px] ">Verified Orgs
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/profile.svg" alt="" class="invert object-contain h-[30px] ">Profile
+                </li>
+                <li class="flex items-center h-[50px] overflow-hidden gap-3 font-medium cursor-pointer"><img
+                        src="svg/more.svg" alt="" class="invert object-contain h-[30px] ">More
+                </li>
+            </ul>
+            <div
+                class=" h-[55px] mt-[20px] mb-[10px] flex items-center justify-center text-lg font-bold bg-[#1d9bf0] rounded-[40px] mr-6">
+                Post
+            </div>
+            <div class="flex justify-between items-center m-2">
+                <div class="flex mt-4 gap-x-2">
+                    <img src="images/user.png" alt="profile" class="h-[50px] object-cover w-[50px] ">
+                    <div>
+                        <p class="font-bold">PRADEEP KUMAR</p>
+                        <p class="text-gray-500 text-sm">@pradeepk82995</p>
+                    </div>
+                </div>
+                <div><img src="images/three dot white.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="middle bg-black border-x-2 border-gray-700 w-[50%] h-[100%] relative">
+            <div
+                class="flex justify-center gap-80 items-center sticky top-0 bg-gray-900 h-[50px] font-medium text-gray-400 hover:cursor-pointer">
+                <span class="hover:text-white">For you</span>
+                <span class="hover:text-white">Following</span>
+            </div>
+            <div class="border-y-2 border-gray-700">
+                <div class="textArea flex gap-x-2 mt-2">
+                    <div><img src="images/user.png" alt="" class="h-[50px] ml-3 "></div>
+                    <textarea name="" id="" placeholder="What is happening"
+                        class="w-[90%] h-[100px] text-lg font-medium resize-none bg-black text-gray-400 pt-2 ml-2 rounded-md focus:outline-none mt-1 overflow-auto"></textarea>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between border-t-2 border-gray-500 ml-[12%] h-[50px]">
+                        <div class="icons flex gap-2">
+                            <img src="images/img.svg" alt="">
+                            <img src="images/gif.svg" alt="">
+                            <img src="images/ballot.svg" alt="">
+                            <img src="images/emoji.svg" alt="">
+                            <img src="images/schedule.svg" alt="">
+                            <img src="images/location.svg" alt="">
+                        </div>
+                        <div class="h-[35px] bg-blue-400 mr-3 w-[70px] flex items-center justify-center rounded-[50px]">
+                            Post
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center justify-center h-[50px] border-y-2 border-gray-700 text-[#1a89d4] text-lg font-medium">
+                        Show 690 posts</div>
+                </div>
+                <div class="flex justify-start m-[10px] gap-3">
+                    <div><img src="images/elon musk.jpg" alt="elon" class="h-[50px] object-cover "></div>
+                    <div class="flex flex-col">
+                        <div>
+                            <p><a href="https://x.com/elonmusk">Elon Musk</a>@elonmusk . 13h</p>
+                            <div class="border-2 border-gray-700 rounded-md mb-2"  cursor-pointer><video src="videos/v5.mp4" type="video/mp4" controls class="rounded-[5px]"></video>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/comment.svg" alt="" class="invert h-[20px]">1.6K</div>
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/two arrow.svg" alt="" class="invert h-[20px]">50K</div>
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/heart.svg" alt="" class="invert h-[20px]">3K</div>
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/views.svg" alt="" class="invert h-[20px]">6M</div>
+                            <div class="flex items-center gap-2 cursor-pointer">
+                                <div><img src="svg/bookmark.svg" alt="" class="invert h-[20px]"></div>
+                                <div><img src="images/upload.svg" alt="" class="h-[20px]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-start m-[10px] gap-3">
+                    <div><img src="images/elon musk.jpg" alt="elon" class="h-[50px] object-cover "></div>
+                    <div class="flex flex-col">
+                        <div>
+                            <p><a href="https://x.com/elonmusk">Elon Musk</a>@elonmusk . 13h</p>
+                            <div class="border-2 border-gray-700 rounded-md mb-2"><video src="videos/v4.mp4" type="video/mp4" controls class="rounded-[5px]"></video>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/comment.svg" alt="" class="invert h-[20px]">1.6K</div>
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/two arrow.svg" alt="" class="invert h-[20px]">50K</div>
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/heart.svg" alt="" class="invert h-[20px]">3K</div>
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/views.svg" alt="" class="invert h-[20px]">6M</div>
+                            <div class="flex items-center gap-2 cursor-pointer">
+                                <div><img src="svg/bookmark.svg" alt="" class="invert h-[20px]"></div>
+                                <div><img src="images/upload.svg" alt="" class="h-[20px]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-start m-[10px] gap-3">
+                    <div><img src="images/elon musk.jpg" alt="elon" class="h-[50px] object-cover "></div>
+                    <div class="flex flex-col">
+                        <div>
+                            <p><a href="https://x.com/elonmusk">Elon Musk</a>@elonmusk . 13h</p>
+                            <div class="border-2 border-gray-700 rounded-md mb-2"><video src="videos/v3.mp4" type="video/mp4" controls class="rounded-[5px]"></video>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-2  cursor-pointer"><img src="images/comment.svg" alt="" class="invert h-[20px]">1.6K</div>
+                            <div class="flex items-center gap-2  cursor-pointer" ><img src="images/two arrow.svg" alt="" class="invert h-[20px]">50K</div>
+                            <div class="flex items-center gap-2 cursor-pointer"><img src="images/heart.svg" alt="" class="invert h-[20px]">3K</div>
+                            <div class="flex items-center gap-2  cursor-pointer"><img src="images/views.svg" alt="" class="invert h-[20px]">6M</div>
+                            <div class="flex items-center gap-2  cursor-pointer">
+                                <div><img src="svg/bookmark.svg" alt="" class="invert h-[20px]"></div>
+                                <div><img src="images/upload.svg" alt="" class="h-[20px]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right w-[27%] h-[100%] max-h-screen overflow-y-auto sticky top-0 scrollbar-hide">
+            <div class="flex justify-center items-center h-[50px]">
+                <div class="input w-[90%] ">
+                    <input type="text"
+                        class="flex items-center bg-no-repeat bg-left pl-[50px]  py-2 rounded-[50px] focus:outline-blue-700  w-[100%]"
+                        placeholder="search">
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col border-2 border-gray-700 rounded-[15px] m-3 p-3">
+                    <h1 class="text-[22px] font-bold">Subscribe to Premium</h1>
+                    <p>Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
+                    <div
+                        class="h-[35px] bg-blue-400 mr-3 w-[100px] flex items-center justify-center rounded-[50px] mt-2">
+                        Subscribe</div>
+                </div>
+            </div>
+            <div class="flex flex-col border-2 border-gray-700 rounded-[15px] m-3 p-3">
+                <div>
+                    <h1 class="text-[22px] font-bold">What’s happening</h1>
+                </div>
+                <div class="flex gap-2 mt-4">
+                    <img src="images/election image.jpeg" alt="election image"
+                        class="h-[80px] w-[80px] object-cover rounded-[10px]">
+                    <div>
+                        <p class="font-bold">2024 US Elections</p>
+                        <p class="text-gray-500 text-sm">US national news · LIVE</p>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <p class="text-gray-500 text-sm flex justify-between items-center">Politics · Trending <img
+                            src="images/three dot.svg" alt=""
+                            class="cursor-pointer hover:grayscale transition duration-300"></p>
+                    <p class="font-bold">#USElection2024</p>
+                    <p class="text-gray-500 text-sm">Trending with <a
+                            href="https://x.com/search?q=%23USPresidentialElection2024&src=trend_click&vertical=trends"
+                            class="text-[#1d9bf0]">#USPresidentialElection2024</a></p>
+                </div>
+                <div class="mt-5">
+                    <p class="text-gray-500 text-sm flex justify-between items-center">Entertainment · Trending <img
+                            src="images/three dot.svg" alt=""
+                            class="cursor-pointer hover:grayscale transition duration-300"></p>
+                    <p class="font-bold">#Pradeep Kumar</p>
+                    <p class="text-gray-500 text-sm">60.3K posts</p>
+                </div>
+                <div class="mt-5">
+                    <p class="text-gray-500 text-sm flex justify-between items-center">Trending in India <img
+                            src="images/three dot.svg" alt="" class="cursor-pointer  transition duration-300"></p>
+                    <p class="font-bold">#AnushkaSharma</p>
+                    <p class="text-gray-500 text-sm">Trending with <a
+                            href="https://x.com/search?q=%23HappyBirthdayViratKohli&src=trend_click&vertical=trends"
+                            class="text-[#1d9bf0]">#HappyBirthdayViratKohli, </a><a
+                            href="https://x.com/search?q=%23ViratKohli%F0%93%83%B5&src=trend_click&vertical=trends"
+                            class="text-[#1d9bf0]">#ViratKohli𓃵</a></p>
+                </div>
+                <div class="mt-5">
+                    <p class="text-gray-500 text-sm flex justify-between items-center">Travel · Trending <img
+                            src="images/three dot.svg" alt=""
+                            class="cursor-pointer hover:grayscale transition duration-300"></p>
+                    <p class="font-bold">Taj Mahal</p>
+                    <p class="text-gray-500 text-sm">8,863 posts</p>
+                </div>
+                <div class="text-[#1d9bf0] mt-5">
+                    Show more
+                </div>
+            </div>
+            <div class="flex flex-col border-2 border-gray-700 rounded-[15px] m-3 p-3 gap-y-2">
+                <h1 class="text-[22px] font-bold">Who to follow</h1>
+                <div class="flex justify-between items-center">
+                    <div class="flex">
+                        <img src="images/x.jpeg" alt="x" class="h-[50px]">
+                        <span>
+                            <p class="flex items-center"><a href="https://x.com/X">X</a> <img src="images/tick.gif"
+                                    alt="tick" class="h-[25px] bg-black"></p>
+                            <p class="text-gray-500 text-sm">@X</p>
+                        </span>
+                    </div>
+                    <div
+                        class=" bg-white rounded-[20px] flex justify-center items-center text-black w-[80px] h-[30px] font-medium">
+                        Follow</div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex">
+                        <img src="images/codecamp.jpeg" alt="x" class="h-[50px]">
+                        <span>
+                            <p class="flex items-center">freeCodeCamp <img src="images/tick.gif" alt="tick"
+                                    class="h-[25px] bg-black"></p>
+                            <p class="text-gray-500 text-sm">#free</p>
+                        </span>
+                    </div>
+                    <div
+                        class=" bg-white rounded-[20px] flex justify-center items-center text-black w-[80px] h-[30px] font-medium">
+                        Follow</div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex">
+                        <img src="images/code with harry.png" alt="x" class="h-[50px]">
+                        <span>
+                            <p class="flex items-center font-bold text-sm">#Code With harry<img src="images/tick.gif"
+                                    alt="tick" class="h-[25px] bg-black"></p>
+                            <p class="text-gray-500 text-sm">@code</p>
+                        </span>
+                    </div>
+                    <div
+                        class=" bg-white rounded-[20px] flex justify-center items-center text-black w-[80px] h-[30px] font-medium">
+                        Follow</div>
+                </div>
+                <div class="text-[#1d9bf0] mt-5">
+                    Show more
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
